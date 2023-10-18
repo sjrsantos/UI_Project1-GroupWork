@@ -1,42 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!--Import materialize.css-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Happy+School&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Happy+School&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 
     <!-- Link to main.css -->
     <link rel="stylesheet" href="main.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="functional-color-third">
-        <div class="container row">  
+        <div class="container row">
             <div class="col s2">
                 <!-- Logo here -->
                 <img src="./logo.png" class="logo-img">
             </div>
             <div class="col s10"><span class="flow-text">
-                <!-- header title -->
-                <h1 class="header-title">DAILYTUBE Pattern Library</h1>
+                    <!-- header title -->
+                    <h1 class="header-title">DAILYTUBE Pattern Library</h1>
             </div>
         </div>
     </div>
@@ -48,7 +37,8 @@
                 <ul><a href="#" data-target="typography-content" class="collection-item active">Typography</a></ul>
                 <ul><a href="#" data-target="color-content" class="collection-item">Color</a></ul>
                 <ul><a href="#" data-target="page-layout-content" class="collection-item">Page Layout</a></ul>
-                <ul><a href="#" data-target="data-visualization-content" class="collection-item">Data Visualization</a></ul>
+                <ul><a href="#" data-target="data-visualization-content" class="collection-item">Data Visualization</a>
+                </ul>
             </div>
             <div class="collection">
                 <ul class="collection2">Elements</ul>
@@ -57,7 +47,7 @@
                 <ul><a href="#" data-target="notifications-content" class="collection-item">Notifications</a></ul>
                 <ul><a href="#" data-target="tables-content" class="collection-item">Tables</a></ul>
                 <ul><a href="#" data-target="stat-data-content" class="collection-item">Stat/Data</a></ul>
-            </div> 
+            </div>
         </div>
 
         <!-- contents starts here -->
@@ -74,8 +64,8 @@
                         <p class="p-show-typo">Aa</p>
                     </div>
                     <div class="col m9">
-                        <p>Typeface  |  Happy School</p>
-                        <p>font-family  |  'Happy School', Cursive</p>
+                        <p>Typeface | Happy School</p>
+                        <p>font-family | 'Happy School', Cursive</p>
                     </div>
                 </div>
                 <div class="spacer-div"></div>
@@ -89,18 +79,42 @@
                 <hr>
                 <p> 47px | Normal | Happy School</p>
                 <h4 class="h4">DAILYTUBE Heading Four</h4>
-                <hr><p> 36px | Normal | Happy School</p>
+                <hr>
+                <p> 36px | Normal | Happy School</p>
             </div>
-        
+
+            <!-- PARTE QUE ACRESCENTEI(EVERTON) -->
             <!-- color content -->
             <div id="color-content" class="content-section">
-                <h1 class="h1">Color</h1>
+                <div class="frame">
+                    <h1 class="h1">Color</h1>
+                    <div class="color-box" id="color-1" style="background-color: #1e8bad;">
+                        <p class="color-title">#1e8bad</p>
+                    </div>
                     <h2 class="h2">Color 2</h2>
+                    <div class="color-box" id="color-2" style="background-color: #c7ebe1;">
+                        <p class="color-title">#c7ebe1</p>
+                    </div>
                     <h3 class="h3">Color 3</h3>
+                    <div class="color-box" id="color-3" style="background-color: #f9f7ef;">
+                        <p class="color-title">#f9f7ef</p>
+                    </div>
                     <h4 class="h4">Color 4</h4>
+                    <div class="color-box" id="color-4" style="background-color: #b3d0cc;">
+                        <p class="color-title">#b3d0cc</p>
+                    </div>
                     <h5 class="h5">Color 5</h5>
+                    <div class="color-box" id="color-5" style="background-color: #c7ebe1;">
+                        <p class="color-title">#455a64</p>
+                    </div>
                     <h6 class="h6">Color 6</h6>
+                    <div class="color-box" id="color-6" style="background-color: #c7ebe1;">
+                        <p class="color-title">#f9f7ef</p>
+                    </div>
+                </div>
+
             </div>
+
         </div>
 
     </div>
@@ -121,7 +135,7 @@
         navItems.forEach((item) => {
             item.addEventListener("click", function (e) {
                 e.preventDefault(); // Prevent the default link behavior
-                
+
                 // Remove the "active" class from all navigation items
                 navItems.forEach((nav) => {
                     nav.classList.remove("active");
@@ -148,11 +162,12 @@
         });
 
 
-      document.addEventListener("DOMContentLoaded", function () {
-        M.AutoInit();
-      });
+        document.addEventListener("DOMContentLoaded", function () {
+            M.AutoInit();
+        });
     </script>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </body>
+</body>
+
 </html>
