@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Happy+School&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to main.css -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="functional-color-third">
+        <div class="container row">  
+            <div class="col s2">
+                <!-- Logo here -->
+                <img src="./logo.png" class="logo-img">
+            </div>
+            <div class="col s10"><span class="flow-text">
+                <!-- header title -->
+                <h1 class="header-title">DAILYTUBE Pattern Library</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container row">
+        <!-- collection here -->
+        <div class="col s4 section">
+            <div class="collection">
+                <ul class="collection1">General</ul>
+                <ul><a href="#" data-target="typography-content" class="collection-item active">Typography</a></ul>
+                <ul><a href="#" data-target="color-content" class="collection-item">Color</a></ul>
+                <ul><a href="#" data-target="page-layout-content" class="collection-item">Page Layout</a></ul>
+                <ul><a href="#" data-target="data-visualization-content" class="collection-item">Data Visualization</a></ul>
+            </div>
+            <div class="collection">
+                <ul class="collection2">Elements</ul>
+                <ul><a href="#" data-target="buttons-content" class="collection-item">Buttons</a></ul>
+                <ul><a href="#" data-target="form-content" class="collection-item">Form</a></ul>
+                <ul><a href="#" data-target="notifications-content" class="collection-item">Notifications</a></ul>
+                <ul><a href="#" data-target="tables-content" class="collection-item">Tables</a></ul>
+                <ul><a href="#" data-target="stat-data-content" class="collection-item">Stat/Data</a></ul>
+            </div> 
+        </div>
+
+        <!-- contents starts here -->
+        <div class="col s8">
+
+            <!-- typography content -->
+            <div id="typography-content" class="content-section">
+                <h3 class="h3">Typography</h3>
+                <div class="spacer-div"></div>
+                <h4 class="h4">Header Level </h4>
+                <div class="spacer-div"></div>
+                <div class="align-showcase-typo">
+                    <div class="col m3 showcase-typography functional-color-second">
+                        <p class="p-show-typo">Aa</p>
+                    </div>
+                    <div class="col m9">
+                        <p>Typeface  |  Happy School</p>
+                        <p>font-family  |  'Happy School', Cursive</p>
+                    </div>
+                </div>
+                <div class="spacer-div"></div>
+                <h1 class="h1 tp-display">DAILYTUBE Heading One</h1>
+                <hr>
+                <p> 68px | Normal | Happy School</p>
+                <h2 class="h2">DAILYTUBE Heading Two</h2>
+                <hr>
+                <p> 57px | Normal | Happy School</p>
+                <h3 class="h3">DAILYTUBE Heading Three</h3>
+                <hr>
+                <p> 47px | Normal | Happy School</p>
+                <h4 class="h4">DAILYTUBE Heading Four</h4>
+                <hr><p> 36px | Normal | Happy School</p>
+            </div>
+        
+            <!-- color content -->
+            <div id="color-content" class="content-section">
+                <h1 class="h1">Color</h1>
+                    <h2 class="h2">Color 2</h2>
+                    <h3 class="h3">Color 3</h3>
+                    <h4 class="h4">Color 4</h4>
+                    <h5 class="h5">Color 5</h5>
+                    <h6 class="h6">Color 6</h6>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Get all navigation items
+        const navItems = document.querySelectorAll(".collection-item");
+
+        // Hide all content containers
+        function hideAllContent() {
+            document.querySelectorAll(".content-section").forEach((container) => {
+                container.style.display = "none";
+            });
+        }
+
+        // Add click event listeners to the navigation items
+        navItems.forEach((item) => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+                
+                // Remove the "active" class from all navigation items
+                navItems.forEach((nav) => {
+                    nav.classList.remove("active");
+                });
+
+                // Add the "active" class to the clicked navigation item
+                this.classList.add("active");
+
+                // Hide all content containers
+                hideAllContent();
+
+                // Get the ID of the target content container
+                const targetID = this.getAttribute("data-target");
+
+                // Show the target content container
+                document.getElementById(targetID).style.display = "block";
+            });
+        });
+
+        // Initialize by hiding all content containers except the first one (typography-content)
+        document.addEventListener("DOMContentLoaded", function () {
+            hideAllContent();
+            document.getElementById("typography-content").style.display = "block";
+        });
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+        M.AutoInit();
+      });
+    </script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

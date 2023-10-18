@@ -1,0 +1,103 @@
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Happy School", cursive;
+}
+
+body,
+p,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+.header-title {
+  font-size: xx-large;
+  padding-left: 35%;
+}
+
+.collection1 {
+  margin-left: 20%;
+}
+
+.p-show-typo {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.showcase-typography {
+  margin: 20px;
+  align-items: center;
+}
+
+.tp-display {
+  margin-top: 30px;
+}
+
+.spacer-div {
+  margin: 15px; /* Adjust the height to get the desired spacing */
+  display: block;
+  clear: both;
+}
+
+.align-showcase-typo {
+  display: inline-flex;
+  align-items: center; /* This will vertically center align the child items */
+}
+
+/* Colors */
+.main-color {
+  background-color: #1e8bad;
+  color: #fff;
+}
+
+.second-color {
+  background-color: #c7ebe1;
+  color: #1e8bad;
+}
+
+.functional-color-first {
+  background-color: #f9f7ef;
+  color: #1e8bad;
+}
+
+.functional-color-second {
+  background-color: #b3d0cc;
+  color: #1e8bad;
+}
+
+.functional-color-third {
+  background-color: #455a64;
+  color: #fff;
+}
+
+.functional-color-fourth {
+  background-color: #f9f7ef;
+  color: #455a64;
+}
+
+.feedback-color-first {
+  background-color: #f16356;
+  color: #fff;
+}
+
+.feedback-color-second {
+  background-color: #e3d9d1;
+  color: #455a64;
+}
+
+.feedback-color-third {
+  background-color: #ffd482;
+  color: #455a64;
+}
