@@ -43,10 +43,10 @@
             <div class="collection">
                 <ul class="collection2">Elements</ul>
                 <ul><a href="#" data-target="buttons-content" class="collection-item">Buttons</a></ul>
-                <ul><a href="#" data-target="form-content" class="collection-item">Form</a></ul>
-                <ul><a href="#" data-target="notifications-content" class="collection-item">Notifications</a></ul>
-                <ul><a href="#" data-target="tables-content" class="collection-item">Tables</a></ul>
-                <ul><a href="#" data-target="stat-data-content" class="collection-item">Stat/Data</a></ul>
+                <ul><a href="#" data-target="collection-content" class="collection-item">Collection</a></ul>
+                <ul><a href="#" data-target="icons-content" class="collection-item">Icons</a></ul>
+                <ul><a href="#" data-target="pagination-content" class="collection-item">Pagination</a></ul>
+                <ul><a href="#" data-target="preloader-content" class="collection-item">Preloader</a></ul>
             </div>
         </div>
 
@@ -161,35 +161,342 @@
             <div id="buttons-content" class="content-section">
                 <h3 class="h3 center">Buttons</h3>
                 <hr>
+                <h4 class="h4">Regular Buttons </h4>
+                <a class="waves-effect waves-light btn">button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+                <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+                <p>Regular Button Code:</p>
+                <pre><code>
+                    &lt;a class="waves-effect waves-light btn"&gt;button&lt;/a&gt;
+                    &lt;a class="waves-effect waves-light btn"&gt;&lt;i class="material-icons left"&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+                    &lt;a class="waves-effect waves-light btn"&gt;&lt;i class="material-icons right"&gt;cloud&lt;/i&gt;button&lt;/a&gt;
+                </code></pre>
+                <hr>
+
+                <h4 class="h4">Submit Button</h4>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+                <p>Submit Button Code:</p>
+                <pre><code>
+                    &lt;button class="btn waves-effect waves-light" type="submit" name="action"&gt;Submit
+                        &lt;i class="material-icons right"&gt;send&lt;/i&gt;
+                    &lt;/button&gt;
+                </code></pre>
+                    
+
+
 
             </div>
 
-            <!-- Form -->
-            <div id="form-content" class="content-section">
-                <h3 class="h3 center">Form</h3>
+            <!-- Collection -->
+            <div id="collection-content" class="content-section">
+                <h3 class="h3 center">Collection</h3>
                 <hr>
+                <h4 class="h4">Links</h4>
+                <div class="collection">
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item active">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                </div>
+                <p>Collection Code:</p>
+                <pre><code>
+                    &lt;div class="collection"&gt;
+                        &lt;a href="#!" class="collection-item"&gt;Alvin&lt;/a&gt;
+                        &lt;a href="#!" class="collection-item active"&gt;Alvin&lt;/a&gt;
+                        &lt;a href="#!" class="collection-item"&gt;Alvin&lt;/a&gt;
+                        &lt;a href="#!" class="collection-item"&gt;Alvin&lt;/a&gt;
+                    &lt;/div&gt;
+                </code></pre>
+                    
 
             </div>
 
-            <!-- Notifications -->
-            <div id="notifications-content" class="content-section">
-                <h3 class="h3 center">Notifications</h3>
+            <!-- Icons -->
+            <div id="icons-content" class="content-section">
+                <h3 class="h3 center">Icons</h3>
                 <hr>
+                <h4 class="h4">Icons To be Used</h4>
+                <div class="center">
+                <i class="medium material-icons">insert_chart</i>
+                <i class="medium material-icons">add</i>
+                <i class="medium material-icons">add_a_photo</i>
+                <i class="medium material-icons">add_alert</i>
+                <i class="medium material-icons">add_to_photos</i>
+                <i class="medium material-icons">add_to_queue</i>
+                <i class="medium material-icons">airplay</i>
+                <i class="medium material-icons">arrow_back</i>
+                <i class="medium material-icons">arrow_forward</i>
+                <i class="medium material-icons">arrow_downward</i>
+                <i class="medium material-icons">arrow_upward</i>
+                <i class="medium material-icons">aspect_ratio</i>
+                <i class="medium material-icons">assessment</i>
+                <i class="medium material-icons">attach_file</i>
+                <i class="medium material-icons">backup</i>
+                <i class="medium material-icons">cloud_done</i>
+                <i class="medium material-icons">cloud_download</i>
+                <i class="medium material-icons">cloud_upload</i>
+                <i class="medium material-icons">block</i>
+                <i class="medium material-icons">branding_watermark</i>
+                <i class="medium material-icons">bug_report</i>
+                <i class="medium material-icons">broken_image</i>
+                <i class="medium material-icons">cached</i>
+                <i class="medium material-icons">cast</i>
+                <i class="medium material-icons">cast_connected</i>
+                <i class="medium material-icons">chat</i>
+                <i class="medium material-icons">comment</i>
+                <i class="medium material-icons">code</i>
+                </div>
+
+                <p>Icons code:</p>
+                <pre><code>
+                    &lt;i class="medium material-icons"&gt;insert_chart&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;add&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;add_a_photo&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;add_alert&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;add_to_photos&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;add_to_queue&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;airplay&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;arrow_back&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;arrow_forward&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;arrow_downward&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;arrow_upward&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;aspect_ratio&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;assessment&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;attach_file&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;backup&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;cloud_done&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;cloud_download&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;cloud_upload&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;block&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;branding_watermark&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;bug_report&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;broken_image&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;cached&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;cast&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;cast_connected&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;chat&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;comment&lt;/i&gt;
+                    &lt;i class="medium material-icons"&gt;code&lt;/i&gt;
+                </code></pre>
+                    
+
 
             </div>
 
-            <!-- Tables -->
-            <div id="tables-content" class="content-section">
-                <h3 class="h3 center">Tables</h3>
+            <!-- Pagination -->
+            <div id="pagination-content" class="content-section">
+                <h3 class="h3 center">Pagination</h3>
                 <hr>
+                <h4 class="h4">Basic</h4>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                    <li class="active"><a href="#!">1</a></li>
+                    <li class="waves-effect"><a href="#!">2</a></li>
+                    <li class="waves-effect"><a href="#!">3</a></li>
+                    <li class="waves-effect"><a href="#!">4</a></li>
+                    <li class="waves-effect"><a href="#!">5</a></li>
+                    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+                <p>Pagination Code:</p>
+                <pre><code>
+                    &lt;ul class="pagination"&gt;
+                        &lt;li class="disabled"&gt;&lt;a href="#!"&gt;&lt;i class="material-icons"&gt;chevron_left&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="active"&gt;&lt;a href="#!"&gt;1&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="waves-effect"&gt;&lt;a href="#!"&gt;2&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="waves-effect"&gt;&lt;a href="#!"&gt;3&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="waves-effect"&gt;&lt;a href="#!"&gt;4&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="waves-effect"&gt;&lt;a href="#!"&gt;5&lt;/a&gt;&lt;/li&gt;
+                        &lt;li class="waves-effect"&gt;&lt;a href="#!"&gt;&lt;i class="material-icons"&gt;chevron_right&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                </code></pre>
+                    
 
             </div>
 
-            <!-- Stat/Data -->
-            <div id="stat-data-content" class="content-section">
-                <h3 class="h3 center">Stat/Data</h3>
+            <!-- Preloader -->
+            <div id="preloader-content" class="content-section">
+                <h3 class="h3 center">Preloader</h3>
                 <hr>
+                <h4 class="h4">Circle Preloader</h4>
+
+                <div class="row">
+
+                    <!-- first circle -->
+                    <div class="preloader-wrapper big active circle-1">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- second circle -->
+                    <div class="preloader-wrapper medium active circle-2">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- third circle -->
+                    <div class="preloader-wrapper small active circle-3">
+                        <div class="spinner-layer spinner-blue">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-red">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-yellow">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                  
+                        <div class="spinner-layer spinner-green">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div><div class="gap-patch">
+                            <div class="circle"></div>
+                          </div><div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
                 
+                <p>Preloader Code:</p>
+                <pre><code>
+                    &lt;div class="preloader-wrapper big active"&gt;
+                        &lt;div class="spinner-layer spinner-blue"&gt;
+                            &lt;div class="circle-clipper left"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="gap-patch"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="circle-clipper right"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="spinner-layer spinner-red"&gt;
+                            &lt;div class="circle-clipper left"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="gap-patch"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="circle-clipper right"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="spinner-layer spinner-yellow"&gt;
+                            &lt;div class="circle-clipper left"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="gap-patch"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="circle-clipper right"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="spinner-layer spinner-green"&gt;
+                            &lt;div class="circle-clipper left"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="gap-patch"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;&lt;div class="circle-clipper right"&gt;
+                                &lt;div class="circle"&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                </code></pre>
+                    
+
+
             </div>
 
         </div>
