@@ -74,6 +74,25 @@ textarea {
   margin-left: 20%;
 }
 
+.grid-display {
+  border: 2px solid black;
+  margin: 10px 0;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.container-grid {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.highlight {
+  background-color: #f9c2c2;
+}
+
 /* Colors */
 
 /* This color is the main brand color */
