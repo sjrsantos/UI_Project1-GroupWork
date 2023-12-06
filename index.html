@@ -14,6 +14,9 @@
 
     <!-- Link to main.css -->
     <link rel="stylesheet" href="main.css" />
+
+    <script src="https://d3js.org/d3.v6.min.js"></script> <!-- load d3.js -->
+
 </head>
 
 <body>
@@ -213,6 +216,92 @@
             <div id="data-visualization-content" class="content-section">
                 <h3 class="h3 center">Data Visualization</h3>
                 <hr>
+
+                <!-- Chart container -->
+                
+                <ul class="pagination">
+                    <li class="active"><a href="#!" onclick="showChartByIndex(0)">1</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(1)">2</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(2)">3</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(3)">4</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(4)">5</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(5)">6</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(6)">7</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(7)">8</a></li>
+                    <li class="waves-effect"><a href="#!" onclick="showChartByIndex(8)">9</a></li>
+                </ul>
+                  <!-- Chart 1 -->
+                  <div id="chart-container1" style="width:100%; max-width:600px;">
+                      <h4 class="center">Top 100 YouTube Channels in Each Category</h4>
+                        <script src="chart1.js"></script>
+                  </div>
+                  
+                  <!-- Chart 2 -->
+                  <div id="chart-container2" style="width: 100%; max-width: 600px;">
+                    <h4 class="center">Proportion Between Followers and Likes</h4>
+                  </div>
+                  <script src="chart2.js"></script>
+
+                  <!-- Chart 3 -->
+                  <div id="chart-container3" style="width:100%; max-width:600px;">
+                    <h4 class="center">Country's Number of YouTubers on Top 100</h4>
+                    <script src="chart3.js"></script>
+                    
+                  </div>
+
+                  <!-- Chart 4 -->
+                  <div id="chart-container4" style="width:100%; max-width:600px;">
+                    <script src="chart4.js"></script>
+                  </div>
+
+                  <!-- Chart 5 -->
+                  <div id="chart-container5" style="width:100%; max-width:600px;">
+                    <h4 class="center">Top 5 YouTube Channels Quarterly Income</h4>
+                    <script src="chart5.js"></script>
+                  </div>
+
+                  <!-- Chart 6 -->
+                  <div id="chart-container6" style="width:100%; max-width:600px;">
+                    <div>
+                      <h4 id="chart-title-6">Number of YouTube Channels by Category For Each Country</h4>
+                      <label for="countrySelector6">Select Country:</label>
+                      <select id="countrySelector6" onchange="handleUserInput()">
+                        <option value="IN">India</option>
+                        <option value="US">United States</option>
+                        <option value="BR">Brazil</option>
+                        <option value="KR">South Korea</option>
+                        <option value="CA">Canada</option>
+                        <option value="MX">Mexico</option>
+                        <option value="RU">Russia</option>
+                        <option value="SV">El Salvador</option>
+                        <option value="CL">Chile</option>
+                        <option value="NO">Norway</option>
+                        <option value="PR">Puerto Rico</option>
+                        <option value="BY">Belarus</option>
+                        <option value="PH">Philippines</option>
+                        <option value="TH">Thailand</option>
+                      </select>
+                    </div>
+                    <script src="chart6.js"></script>
+                  </div>
+                  
+                  <!-- Chart 7 -->
+                  <div id="chart-container7" style="width:100%; max-width:600px;">
+                    <script src="chart7.js"></script>
+                  </div>
+
+                  <!-- Chart 8 -->
+                  <div id="chart-container8" style="width:100%; max-width:600px;">
+                    <h4 class="center">Top 3 Countries With Most YouTubers in the Top 100</h4>
+                    <script src="chart8.js"></script>
+                  </div>
+
+                  <!-- Chart 9 -->
+                  <div id="chart-container9" style="width:100%; max-width:600px;">
+                    <h4 class="center">Channel With Most Subscribers</h4>
+                    <script src="chart9.js"></script>
+                  </div>
+                
 
             </div>
 
@@ -620,52 +709,105 @@
     </div>
 
     <script>
-
-        // Get all navigation items
-        const navItems = document.querySelectorAll(".collection-item");
-
-        // Hide all content containers
-        function hideAllContent() {
-            document.querySelectorAll(".content-section").forEach((container) => {
-                container.style.display = "none";
-            });
+      // Get all navigation items
+      const navItems = document.querySelectorAll(".collection-item");
+  
+      // Hide all content containers
+      function hideAllContent() {
+          document.querySelectorAll(".content-section").forEach((container) => {
+              container.style.display = "none";
+          });
+      }
+  
+      // Function to show the default chart (chart1)
+      function showDefaultChart() {
+        // Hide all chart containers
+        var charts = document.querySelectorAll('[id^="chart-container"]');
+        for (var i = 0; i < charts.length; i++) {
+          charts[i].style.display = 'none';
         }
 
-        // Add click event listeners to the navigation items
-        navItems.forEach((item) => {
-            item.addEventListener("click", function (e) {
-                e.preventDefault(); // Prevent the default link behavior
+        // Show chart-container1 (chart1) by default
+        document.getElementById("chart-container1").style.display = "block";
+      }
 
-                // Remove the "active" class from all navigation items
-                navItems.forEach((nav) => {
-                    nav.classList.remove("active");
-                });
+      // Show the default chart when the page loads
+      showDefaultChart();
 
-                // Add the "active" class to the clicked navigation item
-                this.classList.add("active");
+      function showChartByIndex(index) {
+        // Debug: Log the containerId
+        console.log("Container ID:", "chart-container" + (index + 1));
+        
+        // Hide all chart containers
+        var charts = document.querySelectorAll('[id^="chart-container"]');
+        for (var i = 0; i < charts.length; i++) {
+          charts[i].style.display = 'none';
+        }
 
-                // Hide all content containers
-                hideAllContent();
+        // Show the corresponding chart container based on the button index
+        // Note: Adding 1 to index since container IDs are 1-based, not 0-based
+        var containerId = "chart-container" + (index + 1);
+        document.getElementById(containerId).style.display = "block";
+      }
 
-                // Get the ID of the target content container
-                const targetID = this.getAttribute("data-target");
 
-                // Show the target content container
-                document.getElementById(targetID).style.display = "block";
-            });
+      // Add click event listeners to the pagination buttons
+      var paginationButtons = document.querySelectorAll(".pagination li a");
+      paginationButtons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+          // Remove the "active" class from all pagination buttons
+          paginationButtons.forEach(function (btn) {
+            btn.parentElement.classList.remove("active");
+          });
+
+          // Add the "active" class to the clicked pagination button
+          button.parentElement.classList.add("active");
+
+          // Show the chart corresponding to the clicked button
+          showChartByIndex(index);
         });
+      });
+      
+      // Add click event listeners to the navigation items
+      navItems.forEach((item) => {
+          item.addEventListener("click", function (e) {
+              e.preventDefault(); // Prevent the default link behavior
+  
+              // Remove the "active" class from all navigation items
+              navItems.forEach((nav) => {
+                  nav.classList.remove("active");
+              });
+  
+              // Add the "active" class to the clicked navigation item
+              this.classList.add("active");
+  
+              // Hide all content containers
+              hideAllContent();
+  
+              // Get the ID of the target content container
+              const targetID = this.getAttribute("data-target");
+  
+              // Show the target content container
+              document.getElementById(targetID).style.display = "block";
+          });
+      });
 
-        // Initialize by hiding all content containers except the first one (typography-content)
-        document.addEventListener("DOMContentLoaded", function () {
-            hideAllContent();
-            document.getElementById("typography-content").style.display = "block";
-        });
+      
 
+      // Function to convert country codes to country names (you can extend this as needed)
+      function getCountryName(countryCode) {
+        switch (countryCode) {
+          case "IN":
+            return "India";
+          // Add more cases for other countries as needed
+          default:
+            return "Unknown";
+        }
+      };   
 
-        document.addEventListener("DOMContentLoaded", function () {
-            M.AutoInit();
-        });
-    </script>
+  
+      
+  </script>
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
