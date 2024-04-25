@@ -3,6 +3,8 @@
 This project is a part of the User Interfaces & Data Visualization - INFO3171 course at Fanshawe College. It is a group project developed by 
 Everton de Souza Rodrigues, Melissa Rodrigues de Camargo, Silvio dos Santos Junior, Lucas Knorst Kepler, and Guilherme Valli Parreira.
 
+To visualize this project you can follow the link: https://sjrsantos.github.io/UI_Project1-GroupWork/
+
 ## Project Overview
 
 YouTube Channels Analysis Dashboard & Pattern Library
